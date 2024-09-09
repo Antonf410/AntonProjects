@@ -134,7 +134,7 @@ go
 
 --Writing a query that displays employees who were rehired by different departments after their initial employment.
 --Display: Department Name, Employee ID, Full Name, Hiring Date, Seniority, Previuse Employee Name, Previuse Employee Date and Different Days.
-		,PreviuseEmpName,PreviusEmpHDate
+SELECT DepartmentName,EmployeeID,EmployeeFullName,HireDate,Seniority,PreviuseEmpName,PreviusEmpHDate
 		,DATEDIFF(DD,PreviusEmpHDate,HireDate) AS DiffDay
 FROM (SELECT D.Name AS DepartmentName
 			,DH.BusinessEntityID AS EmployeeID
